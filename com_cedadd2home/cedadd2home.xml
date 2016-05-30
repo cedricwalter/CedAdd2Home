@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_cedadd2home</name>
+    <creationDate>2016-05-30</creationDate>
+
+    <author>Galaxiis</author>
+    <authorEmail>galaxiiscom@gmail.com</authorEmail>
+    <authorUrl>www.galaxiis.com</authorUrl>
+
+    <version>2.1.0-free</version>
+
+    <copyright>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</copyright>
+    <license>http://confluence.galaxiis.com/display/GAL/SOFTWARE+LICENSE+AGREEMENT</license>
+
+    <description>A set of modules, plugins extensions for SmugMug the famous paid digital photo sharing website</description>
+
+    <files folder="components/com_cedadd2home">
+        <file>index.html</file>
+    </files>
+
+    <languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.com_cedadd2home.ini</language>
+    </languages>
+
+    <media destination="com_cedadd2home" folder="media/com_cedadd2home">
+        <folder>css</folder>
+        <folder>images</folder>
+        <filename>index.html</filename>
+    </media>
+
+    <administration>
+        <menu link="option=com_cedadd2home">CedAdd2home</menu>
+        <submenu>
+            <menu view="liveupdate" img="../media/com_cedadd2home/images/live-update.png">Live Update</menu>
+        </submenu>
+
+        <files folder="administrator/components/com_cedadd2home">
+            <folder>views</folder>
+            <folder>helpers</folder>
+            <folder>liveupdate</folder>
+            <filename>config.xml</filename>
+            <file>cedadd2home.php</file>
+            <file>controller.php</file>
+            <file>license.txt</file>
+            <file>index.html</file>
+        </files>
+        <languages folder="administrator/language/en-GB">
+            <language tag="en-GB">en-GB.com_cedadd2home.ini</language>
+        </languages>
+    </administration>
+
+</extension>

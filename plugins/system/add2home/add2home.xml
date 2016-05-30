@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>CedAdd2Home | Galaxiis.com</name>
+    <author>Galaxiis</author>
+    <creationDate>2016-05-30</creationDate>
+
+    <copyright>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
+
+    <authorEmail>galaxiiscom@gmail.com</authorEmail>
+    <authorUrl>www.galaxiis.com</authorUrl>
+
+    <version>2.1.0-free</version>
+
+    <description>PLG_SYSTEM_ADD2HOME_XML_DESCRIPTION</description>
+
+    <files>
+        <folder>language</folder>
+        <folder>fields</folder>
+        <filename plugin="add2home">add2home.php</filename>
+
+        <filename plugin="add2home">helper.php</filename>
+        <filename plugin="add2home">android.php</filename>
+        <filename plugin="add2home">ios.php</filename>
+        <filename plugin="add2home">provider.php</filename>
+        <filename plugin="add2home">scaler.php</filename>
+        <filename plugin="add2home">windows.php</filename>
+        <filename plugin="add2home">windows8.php</filename>
+
+        <filename plugin="add2home">license.txt</filename>
+        <filename plugin="add2home">license-add2home.txt</filename>
+        <filename plugin="add2home">license-stay-standalone.txt</filename>
+		<folder>assets</folder>
+    </files>
+
+    <media>
+        <folder>plg_system_add2home</folder>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+            </fieldset>
+
+            <fieldset name="Common" label="Common" addfieldpath="/plugins/system/add2home/fields">
+
+                <field name="useHandheldFriendly" type="radio" default="1" label="Handheld Friendly"
+                       description="The HandheldFriendly META tag was originally supported by AvantGo mobile browsers in Palm devices to identify mobile-optimized markup. Today, it is widely interpreted by mobile browsers and spiders as an indicator of mobile markup and a directive to display the web document without scaling. The value of the META tag is “true” for mobile markup and “false” for desktop-optimized HTML. Default is True."
+                       class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="logging" type="radio" default="false" label="PLG_SYSTEM_CEDADD2HOME_LOGGING"
+                       description="PLG_SYSTEM_CEDADD2HOME_LOGGING_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+
+                <field name="debug" type="radio" default="false" label="PLG_SYSTEM_CEDADD2HOME_DEBUG"
+                       description="PLG_SYSTEM_CEDADD2HOME_DEBUG_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+
+                <field name="useCustomTitle" type="radio" default="false" label="PLG_SYSTEM_CEDADD2HOME_HOME_SCREEN_ICON_NAME"
+                       description="PLG_SYSTEM_CEDADD2HOME_HOME_SCREEN_ICON_NAME_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+
+                <field name="apple-mobile-web-app-title" type="text" default="PLG_SYSTEM_CEDADD2HOME_HOME_SCREEN_ICON_NAME_TITLE_DEFAULT"
+                       label="PLG_SYSTEM_CEDADD2HOME_HOME_SCREEN_ICON_NAME_TITLE"
+                       required="false"
+                       translate_default="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_HOME_SCREEN_ICON_NAME_TITLE_DESC"
+                       size="25"
+                        />
+
+                <field name="autostart" type="radio" default="true" label="PLG_SYSTEM_CEDADD2HOME_AUTOSTART"
+                       description="PLG_SYSTEM_CEDADD2HOME_AUTOSTART_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+                <field name="startDelay" type="integer" default="1"
+                       required="true"
+                       label="PLG_SYSTEM_CEDADD2HOME_START_DELAY" description="PLG_SYSTEM_CEDADD2HOME_START_DELAY_DESC"
+                       size="6"
+                       first="0"
+                       last="20"
+                       step="1"/>
+                <field name="lifespan" type="integer" default="15"
+                       required="true"
+                       label="PLG_SYSTEM_CEDADD2HOME_LIFESPAN"
+                       description="PLG_SYSTEM_CEDADD2HOME_LIFESPAN_DESC"
+                       size="6"
+                       first="0"
+                       last="60"
+                       step="1"/>
+
+
+
+                <field name="customMessageYes" type="radio" default="0"
+                       label="PLG_SYSTEM_CEDADD2HOME_CUSTOMMESSAGEYES"
+                       description="PLG_SYSTEM_CEDADD2HOME_CUSTOMMESSAGEYES_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="customMessage" type="textarea" cols="20" rows="10"
+                       translate_default="true"
+                       default="PLG_SYSTEM_CEDADD2HOME_CUSTOMMESSAGE_DEFAULT"
+                       label="PLG_SYSTEM_CEDADD2HOME_CUSTOMMESSAGE"
+                       description="PLG_SYSTEM_CEDADD2HOME_CUSTOMMESSAGE_DESC"
+                       size="40"/>
+                <field name="modal" type="radio" default="true" label="PLG_SYSTEM_CEDADD2HOME_MODAL"
+                       description="PLG_SYSTEM_CEDADD2HOME_MODAL_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+                <field name="mandatory" type="radio" default="false" label="PLG_SYSTEM_CEDADD2HOME_MANDATORY"
+                       description="PLG_SYSTEM_CEDADD2HOME_MANDATORY_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+                <field name="skipFirstVisit" type="radio" default="false" label="PLG_SYSTEM_CEDADD2HOME_SKIPFIRSTVISIT"
+                       description="PLG_SYSTEM_CEDADD2HOME_SKIPFIRSTVISIT_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+
+                <field name="displayPace" type="integer" default="0"
+                       required="true"
+                       label="PLG_SYSTEM_CEDADD2HOME_DISPLAYPACE"
+                       description="PLG_SYSTEM_CEDADD2HOME_DISPLAYPACE_DESC"
+                       size="6"
+                       first="0"
+                       last="1440"
+                       step="1"/>
+                <field name="maxDisplayCount" type="integer" default="0"
+                       required="true"
+                       label="PLG_SYSTEM_CEDADD2HOME_MAXDISPLAYCOUNT"
+                       description="PLG_SYSTEM_CEDADD2HOME_MAXDISPLAYCOUNT_DESC"
+                       size="2"
+                       first="0"
+                       last="99"
+                       step="1"/>
+
+                <field name="privateModeOverride" type="radio" default="true" label="PLG_SYSTEM_CEDADD2HOME_PRIVATE_MODE"
+                       description="PLG_SYSTEM_CEDADD2HOME_PRIVATE_MODE_DESC"
+                       class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+
+                <field name="icon" type="radio" default="true" label="PLG_SYSTEM_CEDADD2HOME_ICON"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICON_DESC" class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+
+                <field name="onShow" type="text" default=""
+                       label="PLG_SYSTEM_CEDADD2HOME_ONSHOW"
+                       required="false"
+                       description="PLG_SYSTEM_CEDADD2HOME_ONSHOW_DESC"
+                       size="25"
+                        />
+                <field name="onAdd" type="text" default=""
+                       label="PLG_SYSTEM_CEDADD2HOME_ONADD"
+                       required="false"
+                       description="PLG_SYSTEM_CEDADD2HOME_ONADD_DESC"
+                       size="25"
+                        />
+                <field name="detectHomescreen" type="radio" default="true" label="PLG_SYSTEM_CEDADD2HOME_DETECTHOMESCREEN"
+                       description="PLG_SYSTEM_CEDADD2HOME_DETECTHOMESCREEN_DESC" class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                    <option value="queryString">PLG_SYSTEM_CEDADD2HOME_DETECTHOMESCREEN_QUERYSTRING</option>
+                    <option value="smartURL">PLG_SYSTEM_CEDADD2HOME_DETECTHOMESCREEN_SMARTURL</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="iOS" label="PLG_SYSTEM_CEDADD2HOME_TAB_IOS" addfieldpath="/plugins/system/add2home/fields">
+
+
+            <field
+                        name="spacer1"
+                        type="spacer"
+                        hr="true"
+                        label="PLG_SYSTEM_CEDADD2HOME_TAB_STARTUP_IMAGE"
+                        />
+
+                <field name="hasStartupImage" type="radio" default="1" label="PLG_SYSTEM_CEDADD2HOME_HASSTARTUPIMAGE"
+                       description="PLG_SYSTEM_CEDADD2HOME_HASSTARTUPIMAGE_DESC"
+                       class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="iphone5"
+                        type="spacer"
+                        hr="true"
+                        label=""
+                        />
+
+                <field name="apple-touch-startup-image-320x460" type="orientation"
+                       orientation="portrait" default="media/plg_system_add2home/apple-touch-startup-image-320x460.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE_DESC"
+                       size="40"/>
+                <field name="apple-touch-startup-image-640x920" type="orientation"
+                       orientation="portrait" default="media/plg_system_add2home/apple-touch-startup-image-640x920.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE_RETINA"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE_RETINA_DESC"
+                       size="40"/>
+                <field name="apple-touch-startup-image-640x1096" type="orientation"
+                       orientation="portrait" default="media/plg_system_add2home/apple-touch-startup-image-640x1096.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE5"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE5_DESC"
+                       size="40"/>
+
+                <field
+                        name="iphone6"
+                        type="spacer"
+                        hr="true"
+                        label=""
+                        />
+
+                <!--iphone 6 -->
+                <field name="apple-touch-startup-image-750x1334" type="orientation"
+                       orientation="portrait"
+                       default="media/plg_system_add2home/apple-touch-startup-image-750x1334.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6_DESC"
+                       size="40"/>
+                <field name="apple-touch-startup-image-1334x750" type="orientation"
+                       orientation="landscape"
+                       default="media/plg_system_add2home/apple-touch-startup-image-1334x750.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6_LANDSCAPE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6_LANDSCAPE_DESC"
+                       size="40"/>
+
+                <field
+                        name="iphone6p"
+                        type="spacer"
+                        hr="true"
+                        label=""
+                        />
+
+                <!--iphone 6+   -->
+                <field name="apple-touch-startup-image-1242x2148" type="orientation"
+                       orientation="portrait"
+                       default="media/plg_system_add2home/apple-touch-startup-image-1242x2148.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6P_PORTRAIT"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6P_PORTRAIT_DESC"
+                       size="40"/>
+                <field name="apple-touch-startup-image-2208x1182" type="orientation"
+                       orientation="landscape"
+                       default="media/plg_system_add2home/apple-touch-startup-image-2208x1182.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6P_LANDSCAPE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPHONE6P_LANDSCAPE_DESC"
+                       size="40"/>
+
+                <field
+                        name="ipad"
+                        type="spacer"
+                        hr="true"
+                        label=""
+                        />
+
+                <field name="apple-touch-startup-image-768x1004" type="orientation"
+                       orientation="portrait"
+                       default="media/plg_system_add2home/apple-touch-startup-image-768x1004.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_PORTRAIT"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_PORTRAIT_DESC"
+                       size="40"/>
+                <field name="apple-touch-startup-image-748x1024" type="orientation"
+                       orientation="landscape"
+                       device="ipad"
+                       default="media/plg_system_add2home/apple-touch-startup-image-748x1024.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_LANSCAPE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_LANSCAPE_DESC"
+                       size="40"/>
+
+                <field name="apple-touch-startup-image-1536x2008" type="orientation"
+                       orientation="portrait"
+                       device="ipad"
+                       default="media/plg_system_add2home/apple-touch-startup-image-1536x2008.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_RETINA_PORTRAIT"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_RETINA_PORTRAIT_DESC"
+                       size="40"/>
+                <field name="apple-touch-startup-image-1496x2048" type="orientation"
+                       orientation="landscape"
+                       device="ipad"
+                       default="media/plg_system_add2home/apple-touch-startup-image-1496x2048.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_RETINA_LANSCAPE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_STARTUPIMAGEIPAD_RETINA_LANSCAPE_DESC"
+                       size="40"/>
+
+                <field
+                        name="spacer2"
+                        type="spacer"
+                        hr="true"
+                        label="PLG_SYSTEM_CEDADD2HOME_TAB_STATUS_BAR"
+                        />
+
+                <field name="web-app-status-bar-style" type="radio" default="true"
+                       label="PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE"
+                       description="PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE_DESC" class="btn-group">
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
+                </field>
+                <field name="web-app-status-bar-style-content" type="radio" default="default"
+                       label="PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE_CONTENT"
+                       description="PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE_CONTENT_DESC"
+                       class="btn-group">
+                    <option value="default">PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE_CONTENT_DEFAULT</option>
+                    <option value="black">PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE_CONTENT_BLACK</option>
+                    <option value="black-translucent">PLG_SYSTEM_CEDADD2HOME_WEB_APP_STATUS_BAR_STYLE_CONTENT_BLACK_TRANSLUCENT</option>
+                </field>
+                <field
+                        name="spacer3"
+                        type="spacer"
+                        hr="true"
+                        label="PLG_SYSTEM_CEDADD2HOME_TAB_VIEWPORT"
+                        />
+                <field name="webapp" type="radio" default="1" label="PLG_SYSTEM_CEDADD2HOME_WEBAPP"
+                       description="PLG_SYSTEM_CEDADD2HOME_WEBAPP_DESC"
+                       class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="webapp-links" type="radio" default="1"
+                       label="PLG_SYSTEM_CEDADD2HOME_WEBAPP_LINKS"
+                       description="PLG_SYSTEM_CEDADD2HOME_WEBAPP_LINKS_DESC"
+                       class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="hasViewport" type="radio" default="0" label="PLG_SYSTEM_CEDADD2HOME_HASVIEWPORT"
+                       description="PLG_SYSTEM_CEDADD2HOME_HASVIEWPORT_DESC"
+                       class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="viewport" type="radio" default="width = device-width"
+                       label="PLG_SYSTEM_CEDADD2HOME_VIEWPORT"
+                       description="PLG_SYSTEM_CEDADD2HOME_VIEWPORT_DESC"
+                       class="btn-group">
+                    <option value="width = device-width">PLG_SYSTEM_CEDADD2HOME_VIEWPORT_WIDTH</option>
+                    <option value="initial-scale = 1.0">PLG_SYSTEM_CEDADD2HOME_VIEWPORT_INITIAL_SCALE</option>
+                </field>
+                <field name="userScaling" type="radio" default="user-scalable=yes" label="PLG_SYSTEM_CEDADD2HOME_USERSCALING"
+                       description="PLG_SYSTEM_CEDADD2HOME_USERSCALING_DESC"
+                       class="btn-group">
+                    <option value="user-scalable=yes">JYES</option>
+                    <option value="user-scalable=no">JNO</option>
+                </field>
+                <field name="width" type="integer" default="980"
+                       label="PLG_SYSTEM_CEDADD2HOME_WIDTH"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_WIDTH_DESC"
+                       size="4"
+                       first="0"
+                       last="2600"
+                       step="1"
+                        />
+                <field name="Height" type="integer" default="223"
+                       label="PLG_SYSTEM_CEDADD2HOME_HEIGHT"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_HEIGHT_DESC"
+                       size="4"
+                       first="0"
+                       last="2600"
+                       step="1"/>
+                <field name="maximum-scale" type="text" default="1.6"
+                       label="PLG_SYSTEM_CEDADD2HOME_MAXIMUM_SCALE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_MAXIMUM_SCALE_DESC"
+                       size="4"
+                        />
+                <field name="minimum-scale" type="text" default="0.25"
+                       label="PLG_SYSTEM_CEDADD2HOME_MINIMUM_SCALE"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_MINIMUM_SCALE_DESC"
+                       size="4"/>
+                <field
+                        name="spacer4"
+                        type="spacer"
+                        hr="true"
+                        label="PLG_SYSTEM_CEDADD2HOME_TAB_ICONS"
+                        />
+                <field name="precomposed" type="radio" default="-precomposed" label="PLG_SYSTEM_CEDADD2HOME_PRECOMPOSED"
+                       description="PLG_SYSTEM_CEDADD2HOME_PRECOMPOSED_DESC"
+                       class="btn-group">
+                    <option value=" ">PLG_SYSTEM_CEDADD2HOME_PRECOMPOSED_NO</option>
+                    <option value="-precomposed">PLG_SYSTEM_CEDADD2HOME_PRECOMPOSED_PRECOMPOSED</option>
+                </field>
+
+                <field name="iosIconHelp" type="spacer" class="text"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICON_HELP"
+                        />
+
+                <field name="iconIpadRetinaIos7" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPADRETINAIOS7"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPADRETINAIOS7_DESC"
+                       size="40"/>
+                <field name="iconIpadRetinaIos6" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPADRETINAIOS6"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPADRETINAIOS6_DESC"
+                       size="40"/>
+
+
+                <field name="iconIphone6Plus" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPHONE_6PLUS"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPHONE_6PLUS_DESC"
+                       size="40"/>
+
+                <field name="iconIphoneRetinaIos7" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPHONERETINAIOS7"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPHONERETINAIOS7_DESC"
+                       size="40"/>
+                <field name="iconIphoneRetinaIos6" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPHONERETINAIOS6"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPHONERETINAIOS6_DESC"
+                       size="40"/>
+
+                <field name="iconIpadMiniIos7" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPADMINIIOS7"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPADMINIIOS7_DESC"
+                       size="40"/>
+                <field name="iconIpadMiniIos6" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPADMINIIOS6"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPADMINIIOS6_DESC"
+                       size="40"/>
+
+                <field name="pubPinnedTab" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Pinned Tab Icons' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add Pinned Sites allow your users to keep their favorite websites open, running, and easily accessible. You can set the icon that the user sees when they pin your site by providing a vector image.+&lt;/div&gt;"
+                       default="" description=""/>
+
+                <field name="usePinnedTabAds" type="advertisement" image="usePinnedTab.png" />
+
+
+
+            </fieldset>
+
+            <fieldset name="windows7" label="PLG_SYSTEM_CEDADD2HOME_TAB_WINDOWS7">
+                <field name="pubWin7" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Get Internet Explorer 9+ Support' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add Internet Explorer Support&lt;/div&gt;"
+                       default="" description=""/>
+
+                <field name="windows81Ads" type="advertisement" image="windows7.png" />
+
+            </fieldset>
+
+            <fieldset name="windows81" label="PLG_SYSTEM_CEDADD2HOME_TAB_WINDOWS81">
+                <field name="pubWin81" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Get Windows 8.1 Support' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add Windows 8.1 Support&lt;/div&gt;"
+                       default="" description=""/>
+
+                <field name="windows81Ads" type="advertisement" image="windows81.png" />
+
+            </fieldset>
+
+            <fieldset name="AndroidIcons" label="PLG_SYSTEM_CEDADD2HOME_TAB_ANDROID_ICONS">
+                <field name="pubAndroid" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Get Chrome Mobile 31 Support' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add Chrome Mobile Support 31+&lt;/div&gt;"
+                       default="" description=""/>
+            </fieldset>
+
+            <fieldset name="Advanced" label="PLG_SYSTEM_CEDADD2HOME_TAB_ADVANCED">
+
+                <field name="appID" type="text" default="org.cubiq.myCoolApp"
+                       label="PLG_SYSTEM_CEDADD2HOME_APPID"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_APPID_DESC"
+                       size="25"
+                        />
+
+            </fieldset>
+
+            <fieldset name="Promoting" label="PLG_SYSTEM_CEDADD2HOME_TAB_PROMOTING" addfieldpath="/plugins/system/add2home/fields">
+
+                <field name="pubPromoting" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Promoting Apps with Smart App Banners' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add iOS app promotion+&lt;/div&gt;"
+                       default="" description=""/>
+                <field name="useSmartAppAds" type="advertisement" image="smartbanner_2x.png" />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

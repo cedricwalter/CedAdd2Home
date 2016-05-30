@@ -1,0 +1,23 @@
+Licensing
+
+Please read through our license before using our products.
+
+GALAXIIS.COM LICENSING
+This End User License Agreement (EULA) is a binding legal agreement between you and GALAXIIS.COM. The purchase, installation or use of products by GALAXIIS.COM provided on the GALAXIIS.COM website represents that you have fully read, understood, and agreed to be bound by the terms outlined below.
+
+GALAXIIS.COM GPL LICENSING
+Every Joomla Extensions, Modules, Plugins, Libraries produced by GALAXIIS.COM are released under the GNU General Public License, version 3 (http://www.gnu.org/licenses/gpl-3.0.html). Specifically, the PHP code in GALAXIIS.COM products are distributed under the GPL license. If not otherwise stated, all images, manuals, cascading style sheets (CSS), and included JavaScript are NOT GPL, and are released under the GALAXIIS.COM Proprietary Use License (See below) unless specifically authorized by GALAXIIS.COM. Elements of the extensions released under this proprietary license may not be redistributed or repackaged for use other than those allowed by the Terms of Service.
+
+GALAXIIS.COM PROPRIETARY USE LICENSE
+The GALAXIIS.COM Proprietary Use License covers any images, cascading stylesheets, manuals and JavaScript files in any extensions produced and/or distributed by GALAXIIS.COM. These files are proprietary of GALAXIIS.COM, copyrighted and cannot be redistributed in any form without prior permission from GALAXIIS.COM
+
+USAGE TERMS
+The grant to use the products on unlimited domains is allowed and there are no restrictions of the functionality of the products. There is no support of any kind offered for the Core Extensions distributed on GALAXIIS.com . If you have subscribed to a Pro product, then we provide support only for one domain where the product is installed! If you need support for additional domain you’ll need to purchase a new subscription for it.
+When you post a support request through our online support system, it will track if you have an active license when you post a support request.
+We do not restrict you from modifying the codes in our products.
+
+MODIFICATION OF EXTENSIONS PRODUCED BY GALAXIIS.COM
+You are authorized to make any modification(s) to the code of any Joomla Extension that we distribute. However, if you change any PHP code and it breaks functionality, support may not be available to you.
+In accordance with the GALAXIIS.COM Proprietary Use License, you may not release any proprietary files (modified or otherwise) under the GPL license. The terms of this license and the GPL v2 prohibit the removal of the copyright information from any file.
+
+Please contact us if you have any requirements that are not covered by these terms.
