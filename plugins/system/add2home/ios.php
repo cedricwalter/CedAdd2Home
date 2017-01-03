@@ -59,16 +59,15 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
             $this->preventLinksFromOpeningInMobileSafari();
         }
 
-        if ($params->get('web-app-status-bar-style', true)) {
+        if ($params->get('web-app-status-bar-style', 1)) {
             $this->addMetadata("apple-mobile-web-app-status-bar-style", $params->get('web-app-status-bar-style-content', "black"));
         }
 
-        if ($params->get('format-detection', false)) {
+        if ($params->get('format-detection', 0)) {
             $this->addMetadata("format-detection", "telephone=no");
         }
 
-
-        if ($params->get('useCustomTitle', false)) {
+        if ($params->get('useCustomTitle', 0)) {
             $this->addMetadata("apple-mobile-web-app-title", $params->get('apple-mobile-web-app-title', 'Welcome to Galaxiis'));
         } else {
             $this->addMetadata("apple-mobile-web-app-title", JFactory::getDocument()->title);
@@ -170,8 +169,8 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
         //$languages = new ParamsToText();
         //$this->addScriptDeclaration("var cedAdd2HomeLanguages = ". $languages->convert($params));
 
-        $this->addStyleSheet('media/plg_system_add2home/addtohomescreen.css?v=2.1.0-free');
-        $this->addScript('media/plg_system_add2home/addtohomescreen.min.js?v=2.1.0-free');
+        $this->addStyleSheet(JUri::base().'/media/plg_system_add2home/addtohomescreen.css?v=2.2.1');
+        $this->addScript(JUri::base().'/media/plg_system_add2home/addtohomescreen.min.js?v=2.2.1');
 
         $this->addScriptDeclaration(cedAdd2homeHelper::getJavascriptInitializer($params));
     }

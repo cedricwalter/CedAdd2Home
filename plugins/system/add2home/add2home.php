@@ -21,7 +21,7 @@ require_once(dirname(__FILE__) . '/windows.php');
 class plgSystemAdd2Home extends JPlugin
 {
 
-    function plgSystemAdd2Home(& $subject, $config)
+    function __construct(& $subject, $config)
     {
         parent::__construct($subject, $config);
         $this->loadLanguage();

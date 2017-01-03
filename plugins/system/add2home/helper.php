@@ -23,7 +23,7 @@ class cedAdd2homeHelper {
         $parameters[] = "maxDisplayCount: ". $params->get('maxDisplayCount', 1);
         $parameters[] = "icon: " . $params->get('icon', 'true');
         $parameters[] = "detectHomescreen: " . $params->get('detectHomescreen', 'false');
-        $parameters[] = "autostart: " . $params->get('autostart', 'true');
+        $parameters[] = "autostart: " . $params->get('autostart', 1) ? 'true' : 'false';
 
         $parameters[] = "debug: " . $params->get('debug', 'false');
         $parameters[] = "logging: " . $params->get('logging', 'false');
