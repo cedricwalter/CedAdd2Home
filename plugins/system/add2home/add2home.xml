@@ -2,7 +2,7 @@
 <extension version="3.4" type="plugin" group="system" method="upgrade">
     <name>CedAdd2Home | Galaxiis.com</name>
     <author>Galaxiis</author>
-    <creationDate>2016-12-31</creationDate>
+    <creationDate>2017-03-18</creationDate>
 
     <copyright>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
@@ -10,7 +10,7 @@
     <authorEmail>galaxiiscom@gmail.com</authorEmail>
     <authorUrl>www.galaxiis.com</authorUrl>
 
-    <version>2.2.1</version>
+    <version>3.0.0</version>
 
     <description>PLG_SYSTEM_ADD2HOME_XML_DESCRIPTION</description>
 
@@ -47,12 +47,16 @@
                         type="galaxiismessage"
                         message="note"
                         label="Please help us: vote, suggest and give us your opinion in the Joomla extensions directory. With this you will help us to increase our interest to modify and update the extension. Thank you very much."/>
-
+                <field
+                        name="downloadid"
+                        type="galaxiisdownloadid"
+                        message="download id"
+                />
                 <field
                         name="version_msg"
                         type="galaxiismessage"
                         message="version"
-                        version="2.2.1"
+                        version="3.0.0"
                         extension_name="CedAdd2Home"/>
             </fieldset>
 

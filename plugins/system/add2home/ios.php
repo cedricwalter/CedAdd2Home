@@ -169,8 +169,8 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
         //$languages = new ParamsToText();
         //$this->addScriptDeclaration("var cedAdd2HomeLanguages = ". $languages->convert($params));
 
-        $this->addStyleSheet(JUri::base().'/media/plg_system_add2home/addtohomescreen.css?v=2.2.1');
-        $this->addScript(JUri::base().'/media/plg_system_add2home/addtohomescreen.min.js?v=2.2.1');
+        $this->addStyleSheet(JUri::base().'/media/plg_system_add2home/addtohomescreen.css?v=3.0.0');
+        $this->addScript(JUri::base().'/media/plg_system_add2home/addtohomescreen.min.js?v=3.0.0');
 
         $this->addScriptDeclaration(cedAdd2homeHelper::getJavascriptInitializer($params));
     }

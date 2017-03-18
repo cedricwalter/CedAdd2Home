@@ -14,18 +14,11 @@
 // Don't allow direct access to the module.
 defined('_JEXEC') or die('Restricted access');
 
-require_once JPATH_COMPONENT_ADMINISTRATOR.'/liveupdate/liveupdate.php';
-if( JFactory::getApplication()->input->get('view','') == 'liveupdate') {
-    JToolBarHelper::preferences( 'com_cedadd2home' );
-    LiveUpdate::handleRequest();
-    return;
-}
-
 jimport('joomla.application.component.controller');
 require_once(JPATH_COMPONENT . '/controller.php');
 
 $document = JFactory::getDocument();
-$document->addStyleSheet(JURI::root() . '/media/com_cedadd2home/css/cedadd2home.css');
+$document->addStyleSheet(JURI::base() . '/media/com_cedadd2home/css/cedadd2home.css?v=3.0.0');
 
 $controller = JControllerLegacy::getInstance('CedAdd2home');
 $task = JFactory::getApplication()->input->get('task', 'default', 'string');
