@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: cedric
  * Date: 12/14/2014
  * Time: 12:16 PM
  */
-
-class cedAdd2homeHelper {
+class cedAdd2homeHelper
+{
 
     public static function getJavascriptInitializer($params, $isAndroid = false)
     {
@@ -20,15 +21,21 @@ class cedAdd2homeHelper {
 
         $parameters[] = "displayPace: " . self::mapZeroToFalse($params->get('displayPace', 0));
 
-        $parameters[] = "maxDisplayCount: ". $params->get('maxDisplayCount', 1);
+        $parameters[] = "maxDisplayCount: " . $params->get('maxDisplayCount', 1);
         $parameters[] = "icon: " . $params->get('icon', 'true');
         $parameters[] = "detectHomescreen: " . $params->get('detectHomescreen', 'false');
-        $parameters[] = "autostart: " . $params->get('autostart', 1) ? 'true' : 'false';
+
+        $autoStart = $params->get('autostart', 1);
+        if ($autoStart)
+            $parameters[] = "autostart: true";
+        else {
+            $parameters[] = "autostart: false";
+        }
 
         $parameters[] = "debug: " . $params->get('debug', 'false');
         $parameters[] = "logging: " . $params->get('logging', 'false');
 
-        $parameters[] = "appID: '" . $params->get('appID', "org.cubiq.myCoolApp")."'";
+        $parameters[] = "appID: '" . $params->get('appID', "org.cubiq.myCoolApp") . "'";
         $parameters[] = "privateModeOverride: " . $params->get('privateModeOverride', 'true');
 
 
@@ -63,7 +70,7 @@ class cedAdd2homeHelper {
         }
         $javascript[] = '_ath({' . $pluginsParameters . '});';
         $javascript[] = "";
-         $javascript[] = "});";
+        $javascript[] = "});";
 
         return implode("\n", $javascript);
     }

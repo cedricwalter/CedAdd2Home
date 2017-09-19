@@ -3,7 +3,7 @@
  * @package     CedAdd2Home
  * @subpackage  com_cedadd2home
  *
- * @copyright   Copyright (C) 2013-2016 galaxiis.com All rights reserved.
+ * @copyright   Copyright (C) 2013-2017 galaxiis.com All rights reserved.
  * @license     The author and holder of the copyright of the software is Cédric Walter. The licensor and as such issuer of the license and bearer of the
  *              worldwide exclusive usage rights including the rights to reproduce, distribute and make the software available to the public
  *              in any form is Galaxiis.com
@@ -72,6 +72,7 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
         } else {
             $this->addMetadata("apple-mobile-web-app-title", JFactory::getDocument()->title);
         }
+
 
         //This code tells the browser to adjust the site to the width of the device
         if ($params->get('hasViewport', '1')) {
@@ -169,8 +170,8 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
         //$languages = new ParamsToText();
         //$this->addScriptDeclaration("var cedAdd2HomeLanguages = ". $languages->convert($params));
 
-        $this->addStyleSheet(JUri::base().'/media/plg_system_add2home/addtohomescreen.css?v=3.0.0');
-        $this->addScript(JUri::base().'/media/plg_system_add2home/addtohomescreen.min.js?v=3.0.0');
+        $this->addStyleSheet(JUri::root().'media/plg_system_add2home/addtohomescreen.css?v=3.0.4');
+        $this->addScript(JUri::root().'media/plg_system_add2home/addtohomescreen.min.js?v=3.0.4');
 
         $this->addScriptDeclaration(cedAdd2homeHelper::getJavascriptInitializer($params));
     }

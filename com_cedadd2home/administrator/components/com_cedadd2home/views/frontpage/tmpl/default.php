@@ -3,7 +3,7 @@
  * @package     CedAdd2Home
  * @subpackage  com_cedadd2home
  *
- * @copyright   Copyright (C) 2013-2016 galaxiis.com All rights reserved.
+ * @copyright   Copyright (C) 2013-2017 galaxiis.com All rights reserved.
  * @license     The author and holder of the copyright of the software is Cédric Walter. The licensor and as such issuer of the license and bearer of the
  *              worldwide exclusive usage rights including the rights to reproduce, distribute and make the software available to the public
  *              in any form is Galaxiis.com
@@ -21,7 +21,7 @@ $document->addStyleSheet("https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css
 
 ?>
 
-<h1>CedAdd2Home 3.0.0 <?php echo $this->isFree; ?></h1>
+<h1>CedAdd2Home 3.0.4 <?php echo $this->isFree; ?></h1>
 
 <div>
 
@@ -63,4 +63,4 @@ $document->addStyleSheet("https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css
     </div>
 </div>
 <div></div>
-<p>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</p>
+<p>Copyright (C) 2013-2017 galaxiis.com All rights reserved.</p>

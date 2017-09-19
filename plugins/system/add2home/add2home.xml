@@ -2,15 +2,15 @@
 <extension version="3.4" type="plugin" group="system" method="upgrade">
     <name>CedAdd2Home | Galaxiis.com</name>
     <author>Galaxiis</author>
-    <creationDate>2017-03-18</creationDate>
+    <creationDate>2017-05-31</creationDate>
 
-    <copyright>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</copyright>
+    <copyright>Copyright (C) 2013-2017 galaxiis.com All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
 
     <authorEmail>galaxiiscom@gmail.com</authorEmail>
     <authorUrl>www.galaxiis.com</authorUrl>
 
-    <version>3.0.0</version>
+    <version>3.0.4</version>
 
     <description>PLG_SYSTEM_ADD2HOME_XML_DESCRIPTION</description>
 
@@ -56,7 +56,7 @@
                         name="version_msg"
                         type="galaxiismessage"
                         message="version"
-                        version="3.0.0"
+                        version="3.0.4"
                         extension_name="CedAdd2Home"/>
             </fieldset>
 
@@ -99,11 +99,11 @@
                        size="25"
                         />
 
-                <field name="autostart" type="radio" default="1" label="PLG_SYSTEM_CEDADD2HOME_AUTOSTART"
+                <field name="autostart" type="radio" default="true" label="PLG_SYSTEM_CEDADD2HOME_AUTOSTART"
                        description="PLG_SYSTEM_CEDADD2HOME_AUTOSTART_DESC"
                        class="btn-group">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
+                    <option value="true">JYES</option>
+                    <option value="false">JNO</option>
                 </field>
                 <field name="startDelay" type="integer" default="1"
                        required="true"
@@ -208,6 +208,10 @@
             </fieldset>
 
             <fieldset name="iOS" label="PLG_SYSTEM_CEDADD2HOME_TAB_IOS" addfieldpath="/plugins/system/add2home/fields">
+
+                <field name="pubPinnedTab" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Pinned Tab Icons' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add Pinned Sites allow your users to keep their favorite websites open, running, and easily accessible. You can set the icon that the user sees when they pin your site by providing a vector image.+&lt;/div&gt;"
+                       default="" description=""/>
 
 
             <field
@@ -500,15 +504,18 @@
                        description="PLG_SYSTEM_CEDADD2HOME_ICONIPADMINIIOS6_DESC"
                        size="40"/>
 
-                <field name="pubPinnedTab" type="spacer"
-                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Pinned Tab Icons' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com&quot;&gt;get the paid version&lt;/a&gt; of cedadd2home to add Pinned Sites allow your users to keep their favorite websites open, running, and easily accessible. You can set the icon that the user sees when they pin your site by providing a vector image.+&lt;/div&gt;"
-                       default="" description=""/>
-
-                <field name="usePinnedTabAds" type="advertisement" base_path="media/plg_system_add2home/images/" image="usePinnedTab.png" />
 
 
 
             </fieldset>
+
+
+            <!--<fieldset name="AppleUrl" label="Apple URL Schemes">-->
+
+
+
+
+            <!--</fieldset>-->
 
             <fieldset name="windows7" label="PLG_SYSTEM_CEDADD2HOME_TAB_WINDOWS7">
                 <field name="pubWin7" type="spacer"
