@@ -2,15 +2,15 @@
 <extension version="3.4" type="plugin" group="system" method="upgrade">
     <name>CedAdd2Home | Galaxiis.com</name>
     <author>Galaxiis</author>
-    <creationDate>2017-05-31</creationDate>
+    <creationDate>2020-01-11</creationDate>
 
-    <copyright>Copyright (C) 2013-2017 galaxiis.com All rights reserved.</copyright>
+    <copyright>Copyright (C) 2013-2019 galaxiis.com All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
 
     <authorEmail>galaxiiscom@gmail.com</authorEmail>
     <authorUrl>www.galaxiis.com</authorUrl>
 
-    <version>3.0.4</version>
+    <version>3.9.14</version>
 
     <description>PLG_SYSTEM_ADD2HOME_XML_DESCRIPTION</description>
 
@@ -56,7 +56,7 @@
                         name="version_msg"
                         type="galaxiismessage"
                         message="version"
-                        version="3.0.4"
+                        version="3.9.14"
                         extension_name="CedAdd2Home"/>
             </fieldset>
 

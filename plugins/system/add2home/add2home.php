@@ -3,7 +3,7 @@
  * @package     CedAdd2Home
  * @subpackage  com_cedadd2home
  *
- * @copyright   Copyright (C) 2013-2017 galaxiis.com All rights reserved.
+ * @copyright   Copyright (C) 2013-2019 galaxiis.com All rights reserved.
  * @license     The author and holder of the copyright of the software is Cédric Walter. The licensor and as such issuer of the license and bearer of the
  *              worldwide exclusive usage rights including the rights to reproduce, distribute and make the software available to the public
  *              in any form is Galaxiis.com
@@ -31,7 +31,7 @@ class plgSystemAdd2Home extends JPlugin
     {
         //Do not run in admin area and non HTML  (rss, json, error)
         $app = JFactory::getApplication();
-        if ($app->isAdmin() || JFactory::getDocument()->getType() !== 'html')
+        if ($app->isClient('administrator') || JFactory::getDocument()->getType() !== 'html')
         {
             return true;
         }
@@ -44,7 +44,7 @@ class plgSystemAdd2Home extends JPlugin
     {
         $app = JFactory::getApplication();
 
-        if ($app->isAdmin()) return;
+        if ($app->isClient('administrator')) return;
 
         $document = JFactory::getDocument();
         $docType = $document->getType();
