@@ -157,6 +157,7 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
         $appleTouchIcon = trim('apple-touch-icon' . $params->get('precomposed', '-precomposed'));
 
         if ($isIPad) {
+            $this->addHeadLinks(CedAdd2HomeScaler::scaleIfRequired($params->get('iconIpadPro', 'media/plg_system_add2home/galaxiis.png'), 167, 167), $appleTouchIcon, array('sizes' => '167x167'));
             $this->addHeadLinks(CedAdd2HomeScaler::scaleIfRequired($params->get('iconIpadRetinaIos7', 'media/plg_system_add2home/galaxiis.png'), 152, 152), $appleTouchIcon, array('sizes' => '152x152'));
             $this->addHeadLinks(CedAdd2HomeScaler::scaleIfRequired($params->get('iconIpadRetinaIos6', 'media/plg_system_add2home/galaxiis.png'), 144, 144), $appleTouchIcon, array('sizes' => '144x144'));
             $this->addHeadLinks(CedAdd2HomeScaler::scaleIfRequired($params->get('iconIpadMiniIos7', 'media/plg_system_add2home/galaxiis.png'), 76, 76), $appleTouchIcon, array('sizes' => '76x76'));
@@ -170,8 +171,8 @@ class cedAdd2HomeIos extends CedAdd2HomeProvider
         //$languages = new ParamsToText();
         //$this->addScriptDeclaration("var cedAdd2HomeLanguages = ". $languages->convert($params));
 
-        $this->addStyleSheet(JUri::root().'media/plg_system_add2home/addtohomescreen.css?v=3.9.14');
-        $this->addScript(JUri::root().'media/plg_system_add2home/addtohomescreen.min.js?v=3.9.14');
+        $this->addStyleSheet(JUri::root().'media/plg_system_add2home/addtohomescreen.css?v=3.9.15');
+        $this->addScript(JUri::root().'media/plg_system_add2home/addtohomescreen.min.js?v=3.9.15');
 
         $this->addScriptDeclaration(cedAdd2homeHelper::getJavascriptInitializer($params));
     }

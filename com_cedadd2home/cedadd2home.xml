@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.4" method="upgrade">
     <name>com_cedadd2home</name>
-    <creationDate>2020-01-11</creationDate>
+    <creationDate>2020-01-12</creationDate>
 
     <author>Galaxiis</author>
     <authorEmail>galaxiiscom@gmail.com</authorEmail>
     <authorUrl>www.galaxiis.com</authorUrl>
 
-    <version>3.9.14</version>
+    <version>3.9.15</version>
 
     <copyright>Copyright (C) 2013-2019 galaxiis.com All rights reserved.</copyright>
     <license>http://confluence.galaxiis.com/display/GAL/SOFTWARE+LICENSE+AGREEMENT</license>

@@ -18,7 +18,7 @@ jimport('joomla.application.component.controller');
 require_once(JPATH_COMPONENT . '/controller.php');
 
 $document = JFactory::getDocument();
-$document->addStyleSheet(JURI::base() . '/media/com_cedadd2home/css/cedadd2home.css?v=3.9.14');
+$document->addStyleSheet(JURI::base() . '/media/com_cedadd2home/css/cedadd2home.css?v=3.9.15');
 
 $controller = JControllerLegacy::getInstance('CedAdd2home');
 $task = JFactory::getApplication()->input->get('task', 'default', 'string');

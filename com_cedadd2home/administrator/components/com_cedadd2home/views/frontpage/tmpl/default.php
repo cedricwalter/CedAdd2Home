@@ -21,7 +21,7 @@ $document->addStyleSheet("https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css
 
 ?>
 
-<h1>CedAdd2Home 3.9.14 <?php echo $this->isFree; ?></h1>
+<h1>CedAdd2Home 3.9.15 <?php echo $this->isFree; ?></h1>
 
 <div>
 

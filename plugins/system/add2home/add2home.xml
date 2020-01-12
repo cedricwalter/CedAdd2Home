@@ -2,7 +2,7 @@
 <extension version="3.4" type="plugin" group="system" method="upgrade">
     <name>CedAdd2Home | Galaxiis.com</name>
     <author>Galaxiis</author>
-    <creationDate>2020-01-11</creationDate>
+    <creationDate>2020-01-12</creationDate>
 
     <copyright>Copyright (C) 2013-2019 galaxiis.com All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
@@ -10,7 +10,7 @@
     <authorEmail>galaxiiscom@gmail.com</authorEmail>
     <authorUrl>www.galaxiis.com</authorUrl>
 
-    <version>3.9.14</version>
+    <version>3.9.15</version>
 
     <description>PLG_SYSTEM_ADD2HOME_XML_DESCRIPTION</description>
 
@@ -56,7 +56,7 @@
                         name="version_msg"
                         type="galaxiismessage"
                         message="version"
-                        version="3.9.14"
+                        version="3.9.15"
                         extension_name="CedAdd2Home"/>
             </fieldset>
 
@@ -463,6 +463,12 @@
                 <field name="iosIconHelp" type="spacer" class="text"
                        label="PLG_SYSTEM_CEDADD2HOME_ICON_HELP"
                         />
+
+                <field name="iconIpadPro" type="media" default="media/plg_system_add2home/galaxiis.png"
+                       label="PLG_SYSTEM_CEDADD2HOME_ICONIPADPRO"
+                       required="true"
+                       description="PLG_SYSTEM_CEDADD2HOME_ICONIPADPRO_DESC"
+                       size="40"/>
 
                 <field name="iconIpadRetinaIos7" type="media" default="media/plg_system_add2home/galaxiis.png"
                        label="PLG_SYSTEM_CEDADD2HOME_ICONIPADRETINAIOS7"
